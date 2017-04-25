@@ -1,6 +1,6 @@
 -include env_make
 
-VERSION ?= 1-1.0
+VERSION ?= latest
 
 REPO = frontid/docker-front-dev
 NAME = docker-front-dev-1.0
