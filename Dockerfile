@@ -4,20 +4,22 @@ RUN echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/reposito
 
 RUN set -ex \
     && apk add --update --no-cache ruby \
+    && apk add --update --no-cache nodejs \
+        shadow \
+        bash \
+        git \
     && apk add --update --no-cache --virtual build-dependencies \
         build-base \
         ruby-dev \
         libffi-dev \
-        nodejs \
-        shadow \
-        bash \
     && gem install --no-document \
         json \
         compass \
         sass \
+        io-console \
+        bundler \
     && npm install -g \
     	bower \
-    	bundler \
     	grunt-cli \
     	gulp-cli \
     && apk del build-dependencies

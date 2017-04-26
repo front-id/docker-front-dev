@@ -1,6 +1,6 @@
 -include env_make
 
-VERSION ?= latest
+VERSION ?= 1-1.0
 
 REPO = frontid/docker-front-dev
 NAME = docker-front-dev-1.0
@@ -17,7 +17,7 @@ push:
 	docker push $(REPO):$(VERSION)
 
 shell:
-	docker run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(ENV) $(REPO):$(VERSION) /bin/bash
+	docker run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(ENV) $(REPO):$(VERSION) /bin/sh
 
 run:
 	docker run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(REPO):$(VERSION)
