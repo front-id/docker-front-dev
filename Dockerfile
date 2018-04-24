@@ -8,11 +8,11 @@ RUN set -ex \
         shadow \
         bash \
         git \
+        yarn \
     && apk add --update --no-cache --virtual build-dependencies \
         build-base \
         ruby-dev \
         libffi-dev \
-        yarn \
     && gem install --no-document \
         json \
         compass \
