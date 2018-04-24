@@ -12,6 +12,7 @@ RUN set -ex \
         build-base \
         ruby-dev \
         libffi-dev \
+        yarn \
     && gem install --no-document \
         json \
         compass \
