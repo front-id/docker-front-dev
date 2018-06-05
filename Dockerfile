@@ -28,4 +28,4 @@ RUN set -ex \
 # Add user 1000
 RUN adduser -D -u 1000 user-ext
 
-CMD ["tail -f /dev/null"]
+CMD ["node"]
